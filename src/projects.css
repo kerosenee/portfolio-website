@@ -128,6 +128,10 @@ img {
     border-radius: 10px;
 }
 
+.single-video video {
+    width: 20rem;
+}
+
 .pswp__caption {
     text-align: center;
     font-size: 1rem;

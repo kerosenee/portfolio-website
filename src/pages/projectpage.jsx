@@ -73,6 +73,26 @@ function renderListItem(item, index, slug, parentIndex) {
         );
     }
 
+    if (item.type === "loopvideo") {
+        return (
+            <li className="project-list-item" key={index}>
+                <figure className="single-video">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                    >
+                        <source src={item.src} type="video/mp4" />
+                    </video>
+                    {item.caption ? <figcaption>{item.caption}</figcaption> : null}
+                </figure>
+            </li>
+        );
+    }
+
+
     return null;
 }
 
@@ -147,6 +167,22 @@ function renderSection(section, index, slug) {
                         }))}
                     />
                 </div>
+            );
+
+        case "loopvideo":
+            return (
+                <figure key={index} className="single-video">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                    >
+                        <source src={section.src} type="video/mp4" />
+                    </video>
+                    {section.caption ? <figcaption>{section.caption}</figcaption> : null}
+                </figure>
             );
 
         default:

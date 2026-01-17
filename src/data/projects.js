@@ -43,7 +43,7 @@ export const projects = {
                             "Resizable and collapsible menu"
                         ],
                     },
-                    { type: "image", src: "/images/pp4/toc.gif", alt: "PP4 navigation UI" },
+                    { type: "loopvideo", src: "/images/pp4/toc.mp4", alt: "PP4 navigation TOC" },
                     "Non Table of Contents page to page navigation elements:",
                     {
                         type: "list", items: [
@@ -53,7 +53,7 @@ export const projects = {
                             "In-text footnotes to references within the book"
                         ],
                     },
-                    { type: "image", src: "/images/pp4/toc-nav.gif", alt: "PP4 navigation UI" },
+                    { type: "loopvideo", src: "/images/pp4/toc-nav.mp4", alt: "PP4 navigation" },
 
                     "Other contributions:",
                     {
@@ -76,7 +76,7 @@ export const projects = {
                             },
                             "Index page expanding/collapsing sections, cross-references and links to sections",
 
-                            { type: "image", src: "/images/pp4/index.gif", alt: "Index page navigation" },
+                            { type: "loopvideo", src: "/images/pp4/index.mp4", alt: "Index page navigation" },
                         ],
                     },
                 ],
