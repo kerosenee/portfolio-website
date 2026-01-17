@@ -266,7 +266,6 @@ figure {
 }
 
 .experience-content {
-  min-height: 100vh;
   padding: 8rem 8rem 0 8rem;
   display: flex;
   justify-content: flex-start;
