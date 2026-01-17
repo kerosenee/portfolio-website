@@ -3,6 +3,7 @@ import squiggle from '../assets/squiggle.png'
 import { Link } from 'react-router-dom';
 import Projects from './projects.jsx';
 import ExperienceSection from './experience.jsx';
+import rightArrow from '../assets/right-arrow.svg';
 // import FlowerMorph from '../components/morph.jsx';
 
 function Home() {
@@ -20,18 +21,18 @@ function Home() {
             <div className='contact-spacing'>
               <p>connect with me</p>
               <div className='arrow-spacing'>
-                <img src='src/assets/right-arrow.svg' className='arrow' />
-                <img src='src/assets/right-arrow.svg' className='arrow' />
-                <img src='src/assets/right-arrow.svg' className='arrow' />
+                <img src={rightArrow} className='arrow' />
+                <img src={rightArrow} className='arrow' />
+                <img src={rightArrow} className='arrow' />
               </div>
               <a className='text-link' href='https://www.linkedin.com/in/maria-kuzmenko-24757721b'>my linkedin</a>
             </div>
             <div className='contact-spacing'>
               <p>my email</p>
               <div className='arrow-spacing'>
-                <img src='src/assets/right-arrow.svg' className='arrow' />
-                <img src='src/assets/right-arrow.svg' className='arrow' />
-                <img src='src/assets/right-arrow.svg' className='arrow' />
+                <img src={rightArrow} className='arrow' />
+                <img src={rightArrow} className='arrow' />
+                <img src={rightArrow} className='arrow' />
               </div>
               <a className='text-link' href='mailto:mariaakuzmenko@gmail.com'>mariaakuzmenko@gmail.com</a>
             </div>
