@@ -1,0 +1,307 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #706d75;
+    transition: color 0.5s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-page {
+    display: flex;
+    justify-content: center;
+}
+
+.project-page .link-item {
+    width: fit-content;
+}
+
+.link-item.project-media-link {
+    text-decoration: underline;
+}
+
+.project-text {
+    font-size: 1rem;
+    color: #706d75;
+    line-height: 1.5;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+.project-text li {
+    margin-bottom: 0.5rem;
+}
+
+.project-text ul,
+.project-text li {
+    width: 100%;
+}
+
+.project-list img {
+    margin-left: 2rem;
+}
+.tippy-box {
+    border-radius: 15px;
+}
+
+.project-sublist {
+    margin-left: 2rem;
+}
+
+.project-preview p {
+    color: #79727D;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #444;
+    color: white;
+    margin: 0 0.2rem;
+}
+
+.tags {
+    padding-bottom: 1.5rem;
+}
+
+.tag-web {
+    background-color: #98C1D9;
+}
+
+.tag-ux {
+    background-color: #FFD2FC;
+}
+
+.tag-programming {
+    background-color: #F76C5E;
+}
+
+.tag-arduino {
+    background-color: #F0A6CA;
+}
+
+.tag-motiongraphics {
+    background-color: #DEB986;
+}
+
+.gallery-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pswp-gallery img {
+    width: 15rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.single-image {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.single-image .pswp-gallery img {
+    width: 25rem;
+    border-radius: 10px;
+}
+
+.pswp__caption {
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    margin-top: auto;
+}
+
+.bullet-point-margin {
+    margin-left: 1rem;
+}
+
+.project-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0.75rem;
+
+    max-width: 10rem;
+
+    opacity: 0;
+    transform: translate(-50%, 60px);
+    /* start lower */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project-btn {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    z-index: 0;
+    overflow: hidden;
+
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1rem;
+
+    background-color: #ecedffbf;
+    border-radius: 16px;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #ffffffbf;
+    clip-path: circle(16px at calc(100% - 16px) 16px);
+    transition: clip-path 0.35s ease-out;
+}
+
+.project-btn:hover::before,
+.project-btn:focus-visible::before {
+    clip-path: circle(120% at calc(100% - 16px) 16px);
+}
+
+
+.project-btn:hover,
+.project-btn:focus-visible {
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px #c8ccfb;
+    transform: translateY(-2px);
+}
+
+.project-btn:hover .project-image,
+.project-btn:focus-visible .project-image {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.left-project-column,
+.right-project-column {
+    position: relative;
+    z-index: 1;
+}
+
+.right-project-column {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0.75rem;
+    width: 12rem;
+    /* optional but helps keep card widths consistent */
+    flex-shrink: 0;
+    /* prevents it from collapsing */
+}
+
+.arrow-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #ecedff;
+    border-radius: 0 4px 0 32px;
+    z-index: 2;
+}
+
+.go-to-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: #706d75;
+    font-family: courier, sans;
+}
+
+#gallery-procedureandpractice4-8-7-7 img {
+    width: 7rem;
+}
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .project-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .project-text {
+        margin-top: 1rem;
+    }
+
+    .project-btn {
+        transform: none !important;
+        box-shadow: none !important;
+        border: 3px solid #c8ccfb;
+
+    }
+
+    .project-btn::before {
+        clip-path: circle(160% at calc(100% - 16px) 16px);
+        transition: none;
+    }
+
+    .project-image {
+        opacity: 1;
+        transform: translate(-50%, 0);
+        transition: none;
+    }
+
+    .project-btn:hover,
+    .project-btn:focus-visible {
+        background-color: #ecedffbf !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .project-btn::before,
+    .project-btn:hover::before,
+    .project-btn:focus-visible::before {
+        clip-path: circle(200% at calc(100% - 16px) 16px) !important;
+        transition: none !important;
+    }
+
+    .project-image,
+    .project-btn:hover .project-image,
+    .project-btn:focus-visible .project-image {
+        opacity: 1 !important;
+        transform: translate(-50%, 0) !important;
+        transition: none !important;
+    }
+}
