@@ -12,7 +12,9 @@ function Navbar() {
     <nav id="navbar">
       <div className="nav-container">
         <div className="nav-left">
-          <img src={flower} alt="Maria logo" className="nav-logo" />
+          <a href="/">
+            <img src={flower} alt="flower logo" className="nav-logo" />
+          </a>
         </div>
         <ul className={`nav-list ${isOpen ? "is-open" : ""}`} id="primary-nav">
           <li className='list-item'>
@@ -32,6 +34,7 @@ function Navbar() {
               className="link-item"
             >
               resume
+              <span className="diagonal-arrow">↗</span>
             </a>
           </li>
           {/* <li className='list-item has-dropdown'>
