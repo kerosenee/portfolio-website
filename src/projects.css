@@ -129,7 +129,7 @@ img {
 }
 
 .single-video video {
-    width: 30rem;
+    width: 20rem;
 }
 
 .pswp__caption {
@@ -257,6 +257,20 @@ img {
         flex-direction: column;
         align-items: center;
         padding: 2rem;
+    }
+
+    .project-content .project-text {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-content .project-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-content .right-project-column {
+        width: 8rem;
     }
 
     .project-page {

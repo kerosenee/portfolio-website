@@ -19,6 +19,7 @@ body {
   padding: 0;
   min-width: 100%;
   font-family: 'ZTNature', serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -35,8 +36,10 @@ figure {
 }
 
 #navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: white;
   border-bottom: 2px solid #C8CCFB;
@@ -75,6 +78,7 @@ figure {
   right: 3rem;
   display: flex;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .nav-list {
@@ -85,6 +89,20 @@ figure {
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+.nav-toggle-bar {
+  width: 1.25rem;
+  height: 2px;
+  background-color: #706d75;
+  border-radius: 999px;
 }
 
 .has-dropdown {
@@ -220,6 +238,7 @@ figure {
   padding-top: 8rem;
   padding-right: 8rem;
   background-position: center top;
+  box-sizing: border-box;
 }
 
 @media (max-width: 840px) {
@@ -227,6 +246,8 @@ figure {
     background-size: 125% auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -235,12 +256,16 @@ figure {
     background-size: 125% auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 @media (max-width: 650px) {
   .home-content {
     background-size: 150% auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -263,12 +288,14 @@ figure {
   padding: 8rem 8rem 0 8rem;
   display: flex;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .experience-content {
   padding: 8rem 8rem 0 8rem;
   display: flex;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .experience-section {
@@ -410,10 +437,63 @@ figure {
 
 .panel-scroll {
   box-sizing: border-box;
+  padding-top: 4.5rem;
 }
 
 
 @media (max-width: 768px) {
+  #navbar {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    position: static;
+  }
+
+  .nav-right {
+    z-index: 2;
+    margin-left: auto;
+    margin-right: 3rem;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 1.5rem 1rem;
+    margin: 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #c8ccfb;
+    display: none;
+    z-index: 1;
+  }
+
+  .nav-list.is-open {
+    display: flex;
+  }
+
+  .list-item {
+    padding: 0.5rem 0;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .panel-scroll {
+    padding-top: 3.5rem;
+  }
+
   .banner-container {
     width: 100%;
   }
@@ -440,20 +520,19 @@ figure {
     align-self: center;
   }
 
-  .project-content,
+  .project-content {
+    min-height: auto;
+    padding: 3rem 1rem 2.5rem;
+    background-size: 120% auto;
+    box-sizing: border-box;
+  }
+
   .experience-content {
     min-height: auto;
-    padding: 5rem 2rem 3rem;
+    padding: 4rem 1.5rem 3rem;
     background-size: 120% auto;
   }
 
-  .resume-text {
-    display: none;
-  }
-
-  .resume-icon {
-    display: inline-flex;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
