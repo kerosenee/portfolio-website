@@ -55,6 +55,7 @@ img {
 .project-list img {
     margin-left: 2rem;
 }
+
 .tippy-box {
     border-radius: 15px;
 }
@@ -252,6 +253,15 @@ img {
 #gallery-procedureandpractice4-8-7-7 img {
     width: 7rem;
 }
+
+@media (max-width: 992px) {
+    .project-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .project-content {
         flex-direction: column;
