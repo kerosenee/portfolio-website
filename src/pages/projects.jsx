@@ -5,6 +5,7 @@ import { projects } from "../data/projects";
 
 const projectList = [
   { slug: "procedureandpractice4", title: "Procedure Book Navigation Website" },
+  { slug: "hciapp", title: "Weather-Based Outfit Recommendation App" },
   { slug: "studentdashboard", title: "Student Dashboard UX Design" },
   { slug: "recipefinder", title: "Recipe Finder UX Designer" },
   { slug: "dressupgame", title: "Dress Up Game with Arduino Controller" },
