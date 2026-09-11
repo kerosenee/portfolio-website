@@ -14,8 +14,8 @@ function Home() {
           <div className='introduction-text'>
             <p className='welcome-text'>Welcome to my portfolio</p>
             <p className='name-text'>Development, UX, and Multimedia projects ・ by Maria Anna Kuzmenko</p>
-            <p className='paragraph-text'>Currently a third year student at Carleton University studying Information Technology (in the stream Interactive Multimedia and Design). <br />
-            Previously at the <a href="#hoc-experience-card">House of Commons</a> as a Student Web Developer.
+            <p className='paragraph-text'>Currently a fourth year student at Carleton University studying Information Technology (in the stream Interactive Multimedia and Design). <br />
+            Completed co-op terms at the <a href="#hoc-experience-card">House of Commons</a> and the <a href="#irb-experience-card">Immigration and Refugee Board</a>.
               <br />
             </p>
             <div className='contact-spacing'>

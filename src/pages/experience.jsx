@@ -1,11 +1,32 @@
 import { Link } from "react-router-dom";
 import hocLOGO from '../assets/HOC_LOGO.svg';
+import irbLOGO from '../assets/irb-logo.png';
 
 function ExperienceSection() {
     return (
         <div className="experience-section">
             <div className="section-header">
                 <h2>Experience</h2>
+            </div>
+            <div className="experience-card" id="irb-experience-card">
+                <div className="experience-text">
+                    <h3>UI/UX Designer/Developer (Co-op)</h3>
+                    <p className="experience-org">Immigration and Refugee Board of Canada</p>
+                    <p className="experience-date">May - August 2026</p>
+                    <ul className="experience-list">
+                        <li>Developed and designed pages for web applications using TypeScript, HTML, and TailwindCSS within Svelte and Angular frameworks.</li>
+                        <li>Ensured accessibility compliance by referencing WCAG standards, using JAWS screen reader to validate.</li>
+                        <li>Used Git and Azure DevOps for version control, Agile workflow and task organization.</li>
+                    </ul>
+                </div>
+
+                {/* <div className="experience-image-wrapper">
+                    <img
+                        src={irbLOGO}
+                        alt="Immigration and Refugee Board of Canada Logo"
+                        className="experience-image"
+                    />
+                </div> */}
             </div>
             <div className="experience-card" id="hoc-experience-card">
                 <div className="experience-text">
